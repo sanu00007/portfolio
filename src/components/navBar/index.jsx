@@ -45,6 +45,12 @@ const Navbar = () => {
         setToggleIcon(!toggleIcon)
     }
 
+    const closeNavbar = () => {
+        if (toggleIcon) {
+            setToggleIcon(false);
+        }
+    };
+
     return (
         <div>
             <nav className="navbar">
@@ -57,7 +63,7 @@ const Navbar = () => {
                     {
                         data.map((item, key) => (
                             <li key={key} className="navbar__container__menu__item">
-                                <Link className="navbar__container__menu__item__links" to={item.to}>
+                                <Link className="navbar__container__menu__item__links" to={item.to} onClick={closeNavbar}>
                                     {item.label}
                                 </Link>
                             </li>
@@ -71,6 +77,7 @@ const Navbar = () => {
 
                 </div>
             </nav>
+            {toggleIcon && <div className="overlay" onClick={handleToggleIcon}></div>}
         </div>
     )
 
