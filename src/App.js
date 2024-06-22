@@ -19,7 +19,7 @@ function App() {
     await loadFull(main)
   }
 
-  const renderpaticleJsInHomePage = location.pathname == "/";
+  const renderpaticleJsInHomePage = location.pathname === "/portfolio";
 
   return (
     <div className="App">
@@ -37,7 +37,7 @@ function App() {
     <div className='App__main-page-content'>
 
     <Routes>
-      <Route index path='/' element={<Home/>} />
+      <Route index path='/portfolio' element={<Home/>} />
       <Route path='/about' element={<About/>} />
       <Route path='/resume' element={<Resume/>} />
       <Route path='/skills' element={<Skills/>} />
