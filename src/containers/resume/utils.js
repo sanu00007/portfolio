@@ -34,6 +34,7 @@ export const data = {
             description:
                         "C/C++ , HTML , CSS ",
             content: "Worked in the back-end development of the reporting module for the flagship product, Kanakbooks ",
+            date:"01/09/23 - 31/11/23"
         },
 
 
